@@ -1,4 +1,4 @@
-![Chromeless Chrome](https://raw.github.com/adamschwartz/chrome-chromeless/master/unpacked-extension/icons/icon128.png)
+![Chromeless Chrome](https://raw.github.com/adamschwartz/chrome-chromeless/master/unpacked-extension/icon128.png)
 
 ## Chromeless Chrome
 
