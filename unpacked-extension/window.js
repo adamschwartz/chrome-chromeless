@@ -7,6 +7,7 @@ app.init = function() {
         app.restoreLastWindow();
         app.setupWindowOnBoundsChanged();
         app.setupInput();
+        app.setupButtons();
         app.setupFullScreenEvents();
     });
 };
@@ -79,14 +80,26 @@ app.setupInput = function() {
     }, 300);
 };
 
+app.setupButtons = function() {
+    $('.buttons .maximize').click(function(){
+        $(document).dblclick();
+    });
+
+    $('.buttons .close').click(function(){
+        chrome.app.window.current().close();
+    });
+};
+
 app.setupFullScreenEvents = function() {
     $(document).dblclick(function(){
         var currentWindow = chrome.app.window.current();
         if (app.webkitFullScreen) {
             currentWindow.maximize();
         } else {
+
             currentWindow.restore();
         }
+        $('html')[(app.webkitFullScreen ? 'add' : 'remove') + 'Class']('maximized');
         app.webkitFullScreen = !app.webkitFullScreen;
     });
 };
@@ -97,7 +110,7 @@ app.window.navigate = function(url) {
     if (!/https?:\/\//.test(url)) {
         url = 'http://' + url;
     }
-    $('input').addClass('hidden');
+    $('html').addClass('webview-navigated');
     $('webview').css('opacity', 1).get(0).setAttribute('src', url);
     app.settings.window.url = url;
     app.saveSettings();

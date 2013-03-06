@@ -14,7 +14,7 @@
     },
     "requirements": {
         "3D": {
-            "features": ["webgl"]
+            "features": ["css3d", "webgl"]
         }
     },
     "permissions": [
