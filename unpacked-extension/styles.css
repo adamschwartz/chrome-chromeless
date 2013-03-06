@@ -84,13 +84,13 @@ webview {
 
 
 .buttons .maximize {
-    background: url("app/icons/maximize.png");
+    background: url("images/maximize.png");
 }
 
 .maximized .buttons .maximize {
-    background: url("app/icons/restore.png");
+    background: url("images/restore.png");
 }
 
 .buttons .close {
-    background: url("app/icons/close.png");
+    background: url("images/close.png");
 }
