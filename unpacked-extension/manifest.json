@@ -1,6 +1,7 @@
 {
     "manifest_version": 2,
     "name": "Chromeless",
+    "description": "Chrome without the chrome.",
     "version": "1",
     "icons": {
         "16": "icon16.png",
@@ -11,5 +12,14 @@
             "scripts": ["background.js"]
         }
     },
-    "permissions": ["fullscreen", "webview"]
+    "requirements": {
+        "3D": {
+            "features": ["webgl"]
+        }
+    },
+    "permissions": [
+        "storage",
+        "webview"
+    ],
+    "offline_enabled": false
 }
