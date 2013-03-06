@@ -2,6 +2,8 @@ body, html {
     width: 100%;
     height: 100%;
     overflow: hidden;
+    margin: 0;
+    padding: 0;
 }
 
 input {
@@ -37,10 +39,8 @@ input:focus {
 
 webview {
     opacity: 0;
-    position: fixed;
-    top: 0;
-    z-index: 3;
-    left: 0;
+    margin: 0;
+    padding: 0;
     height: 100%;
     width: 100%;
     overflow: hidden;
