@@ -93,14 +93,13 @@ app.setupButtons = function() {
 app.setupFullScreenEvents = function() {
     $(document).dblclick(function(){
         var currentWindow = chrome.app.window.current();
-        if (app.webkitFullScreen) {
+        if (!app.webkitFullScreen) {
             currentWindow.maximize();
         } else {
-
             currentWindow.restore();
         }
-        $('html')[(app.webkitFullScreen ? 'add' : 'remove') + 'Class']('maximized');
         app.webkitFullScreen = !app.webkitFullScreen;
+        $('html')[(app.webkitFullScreen ? 'add' : 'remove') + 'Class']('maximized');
     });
 };
 
