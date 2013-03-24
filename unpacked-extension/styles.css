@@ -33,23 +33,6 @@ input, .buttons {
     -webkit-app-region: drag;
 }
 
-.webview-navigated input {
-    opacity: 0;
-}
-
-.webview-navigated input:focus, .webview-navigated input:hover {
-    opacity: 0.8;
-}
-
-webview {
-    opacity: 0;
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    overflow: hidden;
-}
-
 .buttons {
     -webkit-transition: opacity 0.4s;
     position: fixed;
@@ -65,14 +48,6 @@ webview {
     padding: 10px 12px 10px 10px;
 }
 
-.webview-navigated .buttons {
-    opacity: 0;
-}
-
-.webview-navigated .buttons:hover {
-    opacity: 0.8;
-}
-
 .buttons > div {
     display: inline-block;
     height: 16px;
@@ -85,7 +60,6 @@ webview {
     opacity: 1;
 }
 
-
 .buttons .maximize {
     background: url("images/maximize.png");
 }
@@ -96,4 +70,29 @@ webview {
 
 .buttons .close {
     background: url("images/close.png");
+}
+
+.webview-navigated .buttons {
+    opacity: 0;
+}
+
+.webview-navigated .buttons:hover {
+    opacity: 0.8;
+}
+
+.webview-navigated input {
+    opacity: 0;
+}
+
+.webview-navigated input:focus, .webview-navigated input:hover {
+    opacity: 0.8;
+}
+
+webview {
+    opacity: 0;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
 }
