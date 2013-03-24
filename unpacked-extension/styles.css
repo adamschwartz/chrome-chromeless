@@ -29,6 +29,10 @@ input:focus {
     outline: none;
 }
 
+input, .buttons {
+    -webkit-app-region: drag;
+}
+
 .webview-navigated input {
     opacity: 0;
 }
